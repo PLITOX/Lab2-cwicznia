@@ -26,7 +26,8 @@ C[3] = np.max(A[:,3])
 C[4] = np.max(A[:,4])
 C[5] = np.max(A[:,5])
 print("Max wartosci")
-print(C)
+print('C = ',C)
+
 
 #6. Modyfikacja B i do D
 print("Usuwanie")
@@ -40,6 +41,68 @@ D = np.delete(B, [1,3], None)
 print(D)
 
 #8. 
-print("MAX del")
-E = np.delete(C, [np.max(C),np.min(C)], None) 
+MAX1 = np.max(C)
+MIN1 = np.min(C)
+for i in range(6):          #6kolumn
+    if C[i] == MAX1: 
+        E=np.delete(C,i)
+        break
+for i in range(5):  
+    if E[i] == MIN1:
+        E=np.delete(E,i)
+        break
 print(E)
+
+
+#9. Wypisz z tablicy A te wiersze, w których znajduje się maksymalny i minimalny element (wykorzystaj funkcje min, max).
+print('Zadanie 9')
+MAX2 = np.max(A)
+MIN2 = np.min(A)    
+for i in range(5):
+    for j in range(6):
+        if A[i,j] == MAX2:
+            print('MAX ',MAX2) 
+            print('Wiersz max:',A[i,:])            
+        elif A[i,j] == MIN2:
+            print('MIN ',MIN2)
+            print('Wiersz min:',A[i,:])   #ostatnie wiersze to max i min i leci od gory
+
+#10. Mnozenie wektorowe i macierzowe
+print('zadanie 10')   
+T=D*E   #Tablicowe
+W=D@E   #wektorowe
+print('Tablicowo:',T)
+print('Wektorowo:',W)
+
+
+
+#11. 
+
+
+#12.
+
+
+#13.
+
+
+#14.
+
+
+#15.
+
+
+#16.
+
+
+#17.
+
+
+#18.
+
+
+#19.
+
+
+
+
+
